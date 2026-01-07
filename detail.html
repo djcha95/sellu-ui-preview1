@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sellu — Product Detail</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="./home.html">
+      <div class="mark" aria-hidden="true"></div>
+      <div><b>Sellu</b><small>Premium Group-buy Commerce</small></div>
+    </a>
+
+    <nav aria-label="Primary">
+      <a href="./home.html" data-page="home.html">홈</a>
+      <a href="./list.html" data-page="list.html">상품</a>
+      <a href="./detail.html" data-page="detail.html">상세</a>
+      <a href="./admin.html" data-page="admin.html">관리자</a>
+    </nav>
+
+    <div class="actions">
+      <button class="iconbtn" aria-label="Search">⌕</button>
+      <a class="iconbtn" aria-label="Cart" href="./cart.html">🛒</a>
+      <button class="iconbtn" aria-label="Profile">👤</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="pageHead">
+    <div>
+      <h1>상품 상세</h1>
+      <p>정보가 충분해서 결제하는 구조 · 과장 없이 명확하게</p>
+    </div>
+    <a class="btn" href="./list.html">← 리스트로</a>
+  </div>
+
+  <section class="detail">
+    <div class="card gallery">
+      <div class="bigImg" aria-label="Product image placeholder"></div>
+      <div class="thumbs" aria-hidden="true">
+        <div class="t"></div><div class="t"></div><div class="t"></div><div class="t"></div>
+      </div>
+    </div>
+
+    <div class="card panel">
+      <span class="pill">마감 임박</span>
+      <div class="title">프리미엄 ○○○ 세트 (공동구매 전용)</div>
+      <p class="small">
+        검증된 라인업 · 명확한 배송/환불 · 정제된 설명으로 불안을 줄입니다.
+      </p>
+
+      <div class="kv">
+        <div class="price mono">39,900원</div>
+        <div class="right">
+          마감 <b class="mono">01/08(목) 23:59</b><br/>
+          발송 <b class="mono">01/10</b> 예정
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="optRow">
+        <label>
+          <span class="fLabel">옵션</span>
+          <select class="select">
+            <option>기본 구성</option>
+            <option>옵션 A (+3,000)</option>
+            <option>옵션 B (+5,000)</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="qty" data-qty-wrap>
+        <div>
+          <div class="fLabel">수량</div>
+          <div class="small">필요한 만큼만, 과장 없는 선택</div>
+        </div>
+        <div class="qCtr">
+          <button class="qBtn" data-qty="dec" aria-label="decrease">−</button>
+          <div class="qVal mono" data-qty-val>1</div>
+          <button class="qBtn" data-qty="inc" aria-label="increase">＋</button>
+        </div>
+      </div>
+
+      <div class="heroCtas" style="margin-top:14px">
+        <a class="btn" href="./cart.html" style="flex:1; justify-content:center;">장바구니 담기</a>
+        <a class="btn btnPrimary" href="./checkout.html" style="flex:1; justify-content:center;">바로 구매 →</a>
+      </div>
+
+      <div class="tabs" data-tabs>
+        <div class="tabbar">
+          <button class="tab active" data-tab="desc">설명</button>
+          <button class="tab" data-tab="rules">공동구매 조건</button>
+          <button class="tab" data-tab="ship">배송/환불</button>
+        </div>
+
+        <div class="tabpanel" data-panel="desc" style="display:block">
+          짧고 구조화된 설명으로 핵심만 전달합니다.
+          <ul>
+            <li>원산지/성분/구성 등 필수 정보 중심</li>
+            <li>과장 문구 대신 객관적 표현 유지</li>
+            <li>필요 시 인증/검증 근거 링크 영역</li>
+          </ul>
+        </div>
+
+        <div class="tabpanel" data-panel="rules" style="display:none">
+          공동구매 특성상 “마감 이후 생산/발주”가 포함될 수 있습니다.
+          <ul>
+            <li>마감 시간 이후 주문 변경 제한</li>
+            <li>품절/옵션 누락 시 부분 취소 가능</li>
+            <li>일정 변동 시 알림(푸시/알림톡) 기준</li>
+          </ul>
+        </div>
+
+        <div class="tabpanel" data-panel="ship" style="display:none">
+          신뢰가 느껴지는 정책 배치가 핵심입니다.
+          <ul>
+            <li>예상 발송일 / 수령 예상일 명시</li>
+            <li>환불/교환 기준을 짧고 명확하게</li>
+            <li>고객센터/문의 동선 최소화</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Sellu © Premium Commerce Platform · 이용약관 · 개인정보처리방침 · 고객센터</div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

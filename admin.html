@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sellu — Admin</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="./home.html">
+      <div class="mark" aria-hidden="true"></div>
+      <div><b>Sellu</b><small>Premium Group-buy Commerce</small></div>
+    </a>
+
+    <nav aria-label="Primary">
+      <a href="./home.html" data-page="home.html">홈</a>
+      <a href="./list.html" data-page="list.html">상품</a>
+      <a href="./detail.html" data-page="detail.html">상세</a>
+      <a href="./admin.html" data-page="admin.html">관리자</a>
+    </nav>
+
+    <div class="actions">
+      <button class="iconbtn" aria-label="Search">⌕</button>
+      <a class="iconbtn" aria-label="Cart" href="./cart.html">🛒</a>
+      <button class="iconbtn" aria-label="Profile">👤</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="pageHead">
+    <div>
+      <h1>관리자</h1>
+      <p>기능 우선, 톤 유지 — “관리도 브랜드의 일부”</p>
+    </div>
+    <a class="btn" href="./home.html">서비스 화면 보기</a>
+  </div>
+
+  <section class="admin">
+    <aside class="card aside">
+      <div class="brandMini">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:900;">Sellu Admin</div>
+          <div style="font-size:12px; color: rgba(255,255,255,.62); margin-top:2px;">운영 대시보드</div>
+        </div>
+      </div>
+
+      <a href="#" class="active">상품 관리 <span>›</span></a>
+      <a href="#">주문 관리 <span>›</span></a>
+      <a href="#">정산/환불 <span>›</span></a>
+      <a href="#">알림 설정 <span>›</span></a>
+      <a href="#">권한/로그 <span>›</span></a>
+    </aside>
+
+    <div class="card content">
+      <div class="kpis">
+        <div class="kpi"><b>오늘 주문</b><span class="mono">28</span></div>
+        <div class="kpi"><b>진행 중 공동구매</b><span class="mono">12</span></div>
+        <div class="kpi"><b>마감 임박</b><span class="mono">3</span></div>
+      </div>
+
+      <div class="table">
+        <div class="thead">
+          <div>상품</div><div>상태</div><div>마감</div><div style="text-align:right">재고</div>
+        </div>
+
+        <div class="trow">
+          <div><b>프리미엄 ○○○ 세트</b><div class="muted">발송 01/10 예정</div></div>
+          <div><span class="status warn">마감 임박</span></div>
+          <div class="mono">01/08</div>
+          <div class="mono" style="text-align:right">18</div>
+        </div>
+
+        <div class="trow">
+          <div><b>정제된 라인업 — ○○○</b><div class="muted">환불 규정 명시</div></div>
+          <div><span class="status ok">진행 중</span></div>
+          <div class="mono">01/10</div>
+          <div class="mono" style="text-align:right">52</div>
+        </div>
+
+        <div class="trow">
+          <div><b>프라이빗 멤버십 특가 — ○○○</b><div class="muted">신규 오픈</div></div>
+          <div><span class="status ok">진행 중</span></div>
+          <div class="mono">01/12</div>
+          <div class="mono" style="text-align:right">120</div>
+        </div>
+
+        <div class="trow">
+          <div><b>브랜드 큐레이션 — ○○○</b><div class="muted">발송일 확정</div></div>
+          <div><span class="status bad">일시중지</span></div>
+          <div class="mono">—</div>
+          <div class="mono" style="text-align:right">—</div>
+        </div>
+      </div>
+
+      <div class="heroCtas" style="margin-top:14px">
+        <button class="btn">상품 등록 (시안)</button>
+        <button class="btn btnPrimary">변경사항 저장 (시안)</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Sellu © Admin · 운영 정책 · 보안 · 로그</div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

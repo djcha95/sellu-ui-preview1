@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sellu — Premium Commerce</title>
+
+  <!-- Pretendard (CDN) -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+
+  <style>
+    :root{
+      --bg: #FBFAF7;          /* cream white */
+      --surface: #FFFFFF;     /* card */
+      --ink: #1F2328;         /* charcoal */
+      --muted: #6B7280;       /* neutral gray */
+      --line: #E7E3DA;        /* warm line */
+      --navy: #0E1A2B;        /* dark navy */
+      --gold: #B08A3A;        /* deep gold (restrained) */
+      --gold-weak: rgba(176, 138, 58, .18);
+      --shadow: 0 10px 30px rgba(17, 24, 39, .06);
+      --radius: 18px;
+      --radius-lg: 22px;
+      --max: 1100px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: "Pretendard Variable", Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      letter-spacing: -0.2px;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+
+    /* Topbar */
+    header{
+      position: sticky;
+      top: 0;
+      background: rgba(251,250,247,.86);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height: 64px;
+      gap: 12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      min-width: 160px;
+    }
+    .mark{
+      width: 36px; height: 36px;
+      border-radius: 12px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 45%),
+        linear-gradient(135deg, rgba(176,138,58,.95), rgba(176,138,58,.55));
+      box-shadow: 0 8px 18px rgba(176,138,58,.18);
+      border: 1px solid rgba(176,138,58,.35);
+    }
+    .brand b{
+      font-size: 15px;
+      letter-spacing: .2px;
+    }
+    .brand small{
+      display:block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    nav{
+      display:flex;
+      gap: 18px;
+      align-items:center;
+      justify-content:center;
+      flex: 1;
+      min-width: 0;
+    }
+    nav a{
+      font-size: 13px;
+      color: rgba(31,35,40,.82);
+      padding: 8px 10px;
+      border-radius: 999px;
+    }
+    nav a:hover{
+      background: rgba(14,26,43,.05);
+    }
+
+    .actions{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      min-width: 160px;
+      justify-content:flex-end;
+    }
+    .iconbtn{
+      width: 38px; height: 38px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      box-shadow: 0 4px 14px rgba(17,24,39,.04);
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+    }
+    .iconbtn:hover{
+      border-color: rgba(176,138,58,.35);
+      box-shadow: 0 6px 18px rgba(176,138,58,.10);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 28px 0 14px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 16px;
+      align-items:stretch;
+    }
+    .card{
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .heroMain{
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+    .heroMain:before{
+      content:"";
+      position:absolute;
+      inset:-40px -60px auto auto;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle at 30% 30%, var(--gold-weak), transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .kicker{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      color: var(--navy);
+      font-size: 12px;
+      letter-spacing: .2px;
+    }
+    .pill{
+      border: 1px solid rgba(176,138,58,.45);
+      color: var(--gold);
+      background: rgba(176,138,58,.08);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 520;
+    }
+    h1{
+      margin: 14px 0 8px;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: -0.6px;
+      font-weight: 680;
+    }
+    .sub{
+      margin:0;
+      color: rgba(31,35,40,.74);
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 52ch;
+    }
+    .heroCtas{
+      display:flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .btn{
+      height: 44px;
+      padding: 0 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      cursor:pointer;
+      font-size: 14px;
+      font-weight: 580;
+    }
+    .btnPrimary{
+      border-color: rgba(176,138,58,.55);
+      background: linear-gradient(135deg, rgba(176,138,58,.98), rgba(176,138,58,.74));
+      color: #fff;
+      box-shadow: 0 14px 26px rgba(176,138,58,.18);
+    }
+    .btnPrimary:hover{ filter: brightness(1.02); }
+    .btnGhost:hover{
+      border-color: rgba(176,138,58,.35);
+      background: rgba(176,138,58,.06);
+    }
+
+    .heroSide{
+      padding: 18px;
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .mini{
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(251,250,247,.2), rgba(255,255,255,.8));
+    }
+    .mini b{ font-size: 13px; }
+    .mini p{
+      margin: 6px 0 0;
+      font-size: 12px;
+      color: rgba(31,35,40,.70);
+      line-height: 1.6;
+    }
+
+    /* Section */
+    .section{
+      padding: 18px 0 36px;
+    }
+    .sectionHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      margin: 18px 0 12px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .sectionHead span{
+      font-size: 12px;
+      color: rgba(31,35,40,.65);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .product{
+      overflow:hidden;
+      border-radius: var(--radius);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .product:hover{
+      transform: translateY(-2px);
+      border-color: rgba(176,138,58,.35);
+      box-shadow: 0 16px 40px rgba(17,24,39,.08);
+    }
+    .thumb{
+      height: 160px;
+      background:
+        linear-gradient(120deg, rgba(14,26,43,.08), rgba(176,138,58,.08));
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .badge{
+      position:absolute;
+      left: 14px; top: 14px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(176,138,58,.35);
+      color: var(--gold);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+    }
+    .body{
+      padding: 14px;
+    }
+    .name{
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.35;
+      margin: 0 0 8px;
+    }
+    .meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap: 10px;
+    }
+    .price{
+      font-size: 15px;
+      font-weight: 720;
+      letter-spacing: -0.3px;
+    }
+    .deadline{
+      font-size: 12px;
+      color: rgba(31,35,40,.62);
+      text-align:right;
+      line-height: 1.4;
+    }
+    .deadline b{
+      color: rgba(31,35,40,.86);
+      font-weight: 650;
+    }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid var(--line);
+      padding: 18px 0 26px;
+      color: rgba(31,35,40,.68);
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      nav{ display:none; }
+      .grid{ grid-template-columns: 1fr; }
+      .thumb{ height: 180px; }
+      .brand{ min-width: unset; }
+      .actions{ min-width: unset; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="#">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <b>Sellu</b>
+          <small>Premium Group-buy Commerce</small>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <a href="#">이번 주 PICK</a>
+        <a href="#">진행 중</a>
+        <a href="#">마감 임박</a>
+        <a href="#">배송·환불</a>
+      </nav>
+
+      <div class="actions">
+        <button class="iconbtn" aria-label="Search">⌕</button>
+        <button class="iconbtn" aria-label="Cart">🛒</button>
+        <button class="iconbtn" aria-label="Profile">👤</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="heroGrid">
+        <div class="card heroMain">
+          <div class="kicker">
+            <span class="pill">Private Selection</span>
+            <span>정제된 공동구매, 신뢰 기반 큐레이션</span>
+          </div>
+
+          <h1>조용히 설득하는 프리미엄 공동구매</h1>
+          <p class="sub">
+            Sellu는 가격을 과장하지 않습니다. 대신, 검증된 상품과 명확한 마감·배송 정보를
+            정돈된 구조로 제공합니다.
+          </p>
+
+          <div class="heroCtas">
+            <button class="btn btnPrimary">진행 중 상품 보기 →</button>
+            <button class="btn btnGhost">배송·환불 정책</button>
+          </div>
+        </div>
+
+        <div class="card heroSide">
+          <div class="mini">
+            <b>신뢰 정보 먼저</b>
+            <p>마감 / 배송 / 환불을 한 화면에서 확인해 결제 불안을 줄입니다.</p>
+          </div>
+          <div class="mini">
+            <b>과한 배너 제거</b>
+            <p>장터 느낌을 지우고, 백화점 온라인몰처럼 여백과 정돈으로 설득합니다.</p>
+          </div>
+          <div class="mini">
+            <b>React 확장 최적</b>
+            <p>이 구조는 그대로 컴포넌트로 분해해 모바일 앱까지 확장 가능합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h2>진행 중 공동구매</h2>
+        <span>마감 정보는 항상 노출 / 가격은 과장하지 않음</span>
+      </div>
+
+      <div class="grid">
+        <a class="card product" href="#">
+          <div class="thumb">
+            <span class="badge">마감 임박</span>
+          </div>
+          <div class="body">
+            <p class="name">프리미엄 ○○○ 세트 (공동구매 전용)</p>
+            <div class="meta">
+              <div class="price">39,900원</div>
+              <div class="deadline">마감 <b>01/08(목)</b><br>발송 <b>01/10</b> 예정</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="card product" href="#">
+          <div class="thumb">
+            <span class="badge">엄선 PICK</span>
+          </div>
+          <div class="body">
+            <p class="name">정제된 라인업 — ○○○ (수량 한정)</p>
+            <div class="meta">
+              <div class="price">24,500원</div>
+              <div class="deadline">마감 <b>01/10(토)</b><br>발송 <b>01/12</b> 예정</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="card product" href="#">
+          <div class="thumb">
+            <span class="badge">신규 오픈</span>
+          </div>
+          <div class="body">
+            <p class="name">프라이빗 멤버십 특가 — ○○○</p>
+            <div class="meta">
+              <div class="price">18,900원</div>
+              <div class="deadline">마감 <b>01/12(월)</b><br>발송 <b>01/14</b> 예정</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Sellu © Premium Commerce Platform · 고객센터 · 약관 · 개인정보처리방침
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sellu — Cart</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="./home.html">
+      <div class="mark" aria-hidden="true"></div>
+      <div><b>Sellu</b><small>Premium Group-buy Commerce</small></div>
+    </a>
+
+    <nav aria-label="Primary">
+      <a href="./home.html" data-page="home.html">홈</a>
+      <a href="./list.html" data-page="list.html">상품</a>
+      <a href="./detail.html" data-page="detail.html">상세</a>
+      <a href="./admin.html" data-page="admin.html">관리자</a>
+    </nav>
+
+    <div class="actions">
+      <button class="iconbtn" aria-label="Search">⌕</button>
+      <a class="iconbtn" aria-label="Cart" href="./cart.html">🛒</a>
+      <button class="iconbtn" aria-label="Profile">👤</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="pageHead">
+    <div>
+      <h1>장바구니</h1>
+      <p>불안을 줄이는 정보 구조: 마감/발송/환불 안내를 항상 보이게</p>
+    </div>
+    <a class="btn" href="./list.html">상품 더 보기</a>
+  </div>
+
+  <section class="split">
+    <div class="card cartList">
+      <div class="cartItem" data-qty-wrap>
+        <div class="cartThumb"></div>
+        <div>
+          <p class="cartName">프리미엄 ○○○ 세트</p>
+          <p class="cartSub">옵션: 기본 구성 · 마감 01/08(목) 23:59 · 발송 01/10 예정</p>
+          <div class="qCtr" style="margin-top:10px">
+            <button class="qBtn" data-qty="dec">−</button>
+            <div class="qVal mono" data-qty-val>1</div>
+            <button class="qBtn" data-qty="inc">＋</button>
+          </div>
+        </div>
+        <div class="cartRight">
+          <div class="cartPrice mono">39,900원</div>
+          <button class="miniBtn">삭제</button>
+        </div>
+      </div>
+
+      <div class="cartItem" data-qty-wrap>
+        <div class="cartThumb"></div>
+        <div>
+          <p class="cartName">정제된 라인업 — ○○○</p>
+          <p class="cartSub">옵션: 옵션 A · 마감 01/10(토) · 발송 01/12 예정</p>
+          <div class="qCtr" style="margin-top:10px">
+            <button class="qBtn" data-qty="dec">−</button>
+            <div class="qVal mono" data-qty-val>1</div>
+            <button class="qBtn" data-qty="inc">＋</button>
+          </div>
+        </div>
+        <div class="cartRight">
+          <div class="cartPrice mono">24,500원</div>
+          <button class="miniBtn">삭제</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="card summary">
+      <div class="sumBox">
+        <div class="row"><span>상품 금액</span><span class="mono">64,400원</span></div>
+        <div class="row"><span>배송비</span><span class="mono">3,000원</span></div>
+        <div class="hr"></div>
+        <div class="total">
+          <b>총 결제 금액</b>
+          <span class="mono">67,400원</span>
+        </div>
+        <p class="muted">
+          결제 전 확인: <br/>
+          • 마감 이후 변경 제한 가능 <br/>
+          • 부분취소/부분환불 규정은 결제 화면에서 재확인
+        </p>
+        <a class="btn btnPrimary" style="width:100%; justify-content:center; margin-top:12px" href="./checkout.html">
+          주문/결제 진행 →
+        </a>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Sellu © Premium Commerce Platform · 이용약관 · 개인정보처리방침 · 고객센터</div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sellu — Checkout</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="./home.html">
+      <div class="mark" aria-hidden="true"></div>
+      <div><b>Sellu</b><small>Premium Group-buy Commerce</small></div>
+    </a>
+
+    <nav aria-label="Primary">
+      <a href="./home.html" data-page="home.html">홈</a>
+      <a href="./list.html" data-page="list.html">상품</a>
+      <a href="./detail.html" data-page="detail.html">상세</a>
+      <a href="./admin.html" data-page="admin.html">관리자</a>
+    </nav>
+
+    <div class="actions">
+      <button class="iconbtn" aria-label="Search">⌕</button>
+      <a class="iconbtn" aria-label="Cart" href="./cart.html">🛒</a>
+      <button class="iconbtn" aria-label="Profile">👤</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="pageHead">
+    <div>
+      <h1>주문/결제</h1>
+      <p>가장 조용해야 하는 화면: 과한 강조 없이, 확신만 남기는 정보 배치</p>
+    </div>
+    <a class="btn" href="./cart.html">← 장바구니</a>
+  </div>
+
+  <section class="split">
+    <div class="card cartList">
+      <h3 style="margin:0 0 12px; font-size:13px; font-weight:900;">배송 정보</h3>
+      <div class="grid2">
+        <input class="input" placeholder="받는 분" />
+        <input class="input" placeholder="연락처" />
+      </div>
+      <div style="margin-top:12px">
+        <input class="input" placeholder="주소" />
+      </div>
+      <div style="margin-top:12px">
+        <textarea class="input" rows="3" placeholder="요청사항 (선택)"></textarea>
+      </div>
+
+      <div class="hr"></div>
+
+      <h3 style="margin:0 0 12px; font-size:13px; font-weight:900;">결제 수단</h3>
+      <div class="chips">
+        <button class="chip active">카드 결제</button>
+        <button class="chip">간편 결제</button>
+        <button class="chip">무통장(시안)</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <h3 style="margin:0 0 10px; font-size:13px; font-weight:900;">정책 확인</h3>
+      <p class="muted" style="margin:0">
+        • 공동구매 특성상 마감 이후 변경이 제한될 수 있습니다.<br/>
+        • 품절/옵션 누락 시 부분 취소/부분 환불이 적용될 수 있습니다.<br/>
+        • 환불/교환 기준은 상품 상세의 “배송/환불” 탭과 동일합니다.
+      </p>
+
+      <div class="heroCtas" style="margin-top:14px">
+        <a class="btn" href="./detail.html" style="flex:1; justify-content:center;">정책 다시 보기</a>
+        <button class="btn btnPrimary" style="flex:1; justify-content:center;">결제하기 (시안)</button>
+      </div>
+    </div>
+
+    <aside class="card summary">
+      <div class="sumBox">
+        <div class="row"><span>상품 금액</span><span class="mono">64,400원</span></div>
+        <div class="row"><span>배송비</span><span class="mono">3,000원</span></div>
+        <div class="hr"></div>
+        <div class="total">
+          <b>총 결제 금액</b>
+          <span class="mono">67,400원</span>
+        </div>
+        <p class="muted">
+          보안/검증 문구는 작게, 그러나 명확히 배치합니다.<br/>
+          결제는 서버 검증(Webhook + 서버 검증)로 확장 가능.
+        </p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Sellu © Premium Commerce Platform · 이용약관 · 개인정보처리방침 · 고객센터</div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

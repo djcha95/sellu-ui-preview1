@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sellu — Home</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="./home.html">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <b>Sellu</b>
+        <small>Premium Group-buy Commerce</small>
+      </div>
+    </a>
+
+    <nav aria-label="Primary">
+      <a href="./home.html" data-page="home.html">홈</a>
+      <a href="./list.html" data-page="list.html">상품</a>
+      <a href="./detail.html" data-page="detail.html">상세</a>
+      <a href="./admin.html" data-page="admin.html">관리자</a>
+    </nav>
+
+    <div class="actions">
+      <button class="iconbtn" aria-label="Search">⌕</button>
+      <a class="iconbtn" aria-label="Cart" href="./cart.html">🛒</a>
+      <button class="iconbtn" aria-label="Profile">👤</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="heroGrid">
+      <div class="card heroMain">
+        <div class="pill">Private Selection</div>
+        <h2>조용하지만 단단한 프리미엄 공동구매</h2>
+        <p class="sub">
+          Sellu는 가격을 과장하지 않습니다. 대신, 검증된 상품과 명확한 마감·배송 정보를
+          정돈된 구조로 제공합니다.
+        </p>
+        <div class="heroCtas">
+          <a class="btn btnPrimary" href="./list.html">진행 중 상품 보기 →</a>
+          <a class="btn" href="./checkout.html">빠른 결제 흐름 보기</a>
+        </div>
+      </div>
+
+      <div class="card heroSide">
+        <div class="mini">
+          <b>신뢰 정보 먼저</b>
+          <p>마감/배송/환불을 상단 구조에서 우선 노출해 결제 불안을 줄입니다.</p>
+        </div>
+        <div class="mini">
+          <b>과한 배너 제거</b>
+          <p>장터 느낌을 지우고, 백화점 온라인몰처럼 여백과 정돈으로 설득합니다.</p>
+        </div>
+        <div class="mini">
+          <b>React 확장 최적</b>
+          <p>이 레이아웃은 컴포넌트 분해가 쉬워 앱까지 자연스럽게 확장됩니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pageHead">
+    <div>
+      <h1>진행 중 공동구매</h1>
+      <p>마감 정보는 명확하게, 표현은 절제된 톤으로 유지합니다.</p>
+    </div>
+    <a class="btn" href="./list.html">전체 보기</a>
+  </div>
+
+  <section class="products">
+    <div class="grid3">
+      <a class="card product" href="./detail.html">
+        <div class="thumb"><span class="badge">마감 임박</span></div>
+        <div class="pbody">
+          <p class="pname">프리미엄 ○○○ 세트 (공동구매 전용)</p>
+          <div class="meta">
+            <div class="price mono">39,900원</div>
+            <div class="deadline">마감 <b>01/08(목)</b><br/>발송 <b>01/10</b> 예정</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card product" href="./detail.html">
+        <div class="thumb"><span class="badge">엄선 PICK</span></div>
+        <div class="pbody">
+          <p class="pname">정제된 라인업 — ○○○ (수량 한정)</p>
+          <div class="meta">
+            <div class="price mono">24,500원</div>
+            <div class="deadline">마감 <b>01/10(토)</b><br/>발송 <b>01/12</b> 예정</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card product" href="./detail.html">
+        <div class="thumb"><span class="badge">신규 오픈</span></div>
+        <div class="pbody">
+          <p class="pname">프라이빗 멤버십 특가 — ○○○</p>
+          <div class="meta">
+            <div class="price mono">18,900원</div>
+            <div class="deadline">마감 <b>01/12(월)</b><br/>발송 <b>01/14</b> 예정</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Sellu © Premium Commerce Platform · 이용약관 · 개인정보처리방침 · 고객센터</div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>
