@@ -342,7 +342,7 @@
 <body>
   <header>
     <div class="wrap topbar">
-      <a class="brand" href="#">
+      <a class="brand" href="./index.html">
         <div class="mark" aria-hidden="true"></div>
         <div>
           <b>Sellu</b>
@@ -351,15 +351,15 @@
       </a>
 
       <nav aria-label="Primary">
-        <a href="#">이번 주 PICK</a>
-        <a href="#">진행 중</a>
-        <a href="#">마감 임박</a>
-        <a href="#">배송·환불</a>
+        <a href="./home.html" data-page="home.html">홈</a>
+        <a href="./list.html" data-page="list.html">상품</a>
+        <a href="./detail.html" data-page="detail.html">상세</a>
+        <a href="./admin.html" data-page="admin.html">관리자</a>
       </nav>
 
       <div class="actions">
         <button class="iconbtn" aria-label="Search">⌕</button>
-        <button class="iconbtn" aria-label="Cart">🛒</button>
+        <a class="iconbtn" aria-label="Cart" href="./cart.html">🛒</a>
         <button class="iconbtn" aria-label="Profile">👤</button>
       </div>
     </div>
@@ -457,5 +457,7 @@
       Sellu © Premium Commerce Platform · 고객센터 · 약관 · 개인정보처리방침
     </div>
   </footer>
+
+  <script src="./app.js"></script>
 </body>
 </html>
